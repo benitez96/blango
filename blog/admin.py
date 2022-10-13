@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Post, Tag
+from .models import Post, Tag, Comment
 
 # Register your models here.
 
@@ -11,3 +11,4 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ('slug', 'published_at')
 
 admin.site.register(Post, PostAdmin)
+admin.site.register(Comment)
